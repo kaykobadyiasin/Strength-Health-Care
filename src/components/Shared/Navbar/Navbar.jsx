@@ -54,7 +54,7 @@ const Navbar = () => {
                                 </Link>
                             ))}
                         </div>
-                        <div onClick={toggleTopNav} className='hover:bg-white hoverTransition hover:bg-opacity-10 cursor-pointer absolute right-2 top-2 p-2 rounded-full flex justify-center items-center'>
+                        <div onClick={toggleTopNav} className='hover:bg-white duration-300 hover:bg-opacity-10 cursor-pointer absolute right-2 top-2 p-2 rounded-full flex justify-center items-center'>
                             <Icon icon='iconamoon:close-bold' className='' />
                         </div>
                     </div>
@@ -79,20 +79,23 @@ const Navbar = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className={`${!mainNav ? 'block' : 'hidden'} absolute z-10 -left-14 top-16 w-80 h-screen bg-white animate__animated animate__slideInLeft rounded-md shadow-xl xl:hidden navMenu`}>
-                        <ul className='flex flex-col py-3'>
+                    <div className={`${!mainNav ? 'block' : 'hidden'} fixed z-10 left-0 top-0 w-72 h-screen bg-white animate__animated animate__slideInLeft rounded-md shadow-xl xl:hidden navMenu`}>
+                        <ul className='flex flex-col py-3 mobileMenu'>
                             <NavLink to={`/`}>
-                                <li className='hover:bg-[#F1F9FB] hover:text-[#4589F4] px-12 py-2 hoverTransition rounded'>
+                                <li className='hover:bg-[#F1F9FB] hover:text-[#4589F4] px-5 py-2 duration-300 rounded'>
                                     Home
                                 </li>
                             </NavLink>
                             {['About', 'Services', 'Doctors', 'Blogs', 'Contact'].map((item, index) => (
                                 <NavLink key={index} to={`/${item.toLowerCase()}`}>
-                                    <li className='hover:bg-[#F1F9FB] hover:text-[#4589F4] px-12 py-2 hoverTransition rounded'>
+                                    <li className='hover:bg-[#F1F9FB] hover:text-[#4589F4] px-5 py-2 duration-300 rounded'>
                                         {item}
                                     </li>
                                 </NavLink>
                             ))}
+                            <div className='block md:hidden pl-5 mt-10'>
+                                <CommonButton name='Appointment' />
+                            </div>
                         </ul>
                     </div>
                     <div className='flex items-center gap-8'>
@@ -103,7 +106,9 @@ const Navbar = () => {
                             <Icon icon='icon-park-outline:shopping-cart' className='text-2xl' />
                             <span className='absolute -top-3 -right-3 text-white bg-[#4589F4] w-2 h-2 rounded-full p-[12px] flex justify-center items-center text-sm'>10</span>
                         </div>
-                        <CommonButton name='Appointment' />
+                        <div className='md:block hidden'>
+                            <CommonButton name='Appointment' />
+                        </div>
                         <button onClick={() => setMainNav(!mainNav)} className='xl:hidden block text-[#031D36]'><Icon icon={`${!mainNav ? 'ci:close-square' : 'fluent:navigation-unread-20-filled'}`} className='text-2xl text-[#031D36]' /></button>
                     </div>
                 </div>

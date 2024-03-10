@@ -13,10 +13,9 @@
     transition-duration: .3s;
 }
 
-.hoverTransition {
-    transition-duration: .3s;
+.mobileMenu .active {
+    border-right: 5px solid #4589F4 !important;
 }
-
 
 
 /* ::-webkit-scrollbar {
@@ -150,4 +149,35 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 900;
     font-style: italic;
+
+}
+
+
+/* slider  */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.hover\:text-white:hover {
+    transition: .3s;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 20px !important;
+    height: 1px;
+    border-radius: 5px !important;
+    transition-duration: .3s;
+}
+
+.swiper-pagination-bullet-active {
+    width: 35px !important;
+    height: 2px;
+    border-radius: 5px !important;
+    transition-duration: .3s;
 }

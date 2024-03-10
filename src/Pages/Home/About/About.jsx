@@ -49,9 +49,9 @@ const About = () => {
                                     </li>
                                 </ul>
                                 <hr className='my-5 w-full' />
-                                <div className='flex items-center gap-3'>
+                                <div className='flex items-center justify-center gap-3'>
                                     <img src={ceo} alt="" />
-                                    <div>
+                                    <div className=''>
                                         <h4 className='font-bold text-xl'>Harry Robart</h4>
                                         <p className=''>Founder CEO</p>
                                     </div>

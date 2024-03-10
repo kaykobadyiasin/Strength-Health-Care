@@ -32,7 +32,7 @@ const Solutions = () => {
 
             <div className="grid lg:grid-cols-4 gap-5 my-20">
                 {[
-                    { icon: 'mingcute:search-line', icoBg: 'bg-[#4589F4]', title: 'Find A Doctor', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit she eiusmod tempor incd.' },
+                    { icon: 'mingcute:search-line', icoBg: 'bg-[#ED4E83]', title: 'Find A Doctor', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit she eiusmod tempor incd.' },
                     { icon: 'mingcute:user-4-line', icoBg: 'bg-[#FE4144]', title: 'Choose Doctor', description: 'Lorem ipsum dolor sit amet she eiusmod tempor incd.' },
                     { icon: 'clarity:date-solid', icoBg: 'bg-[#12BC8F]', title: 'Make An Application', description: 'Lorem ipsum dolor sit amet consectetur she eiusmod tempor incd.' },
                     { icon: 'ic:round-star', icoBg: 'bg-[#4589F4]', title: 'Get Your Solutions', description: 'Lorem ipsum consectetur adipiscing elit she eiusmod tempor incd.' },

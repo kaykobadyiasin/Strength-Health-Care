@@ -22,7 +22,7 @@ const Footer = () => {
                                 <span>Follow:</span>
                                 {socialMediaLinks.map((link) => (
                                     <Link key={link.url} to={link.url} target='_blank'>
-                                        <Icon icon={link.icon} className={`text-${link.color} ${link.size} hover:scale-110 hoverTransition`} />
+                                        <Icon icon={link.icon} className={`text-${link.color} ${link.size} hover:scale-110 duration-300`} />
                                     </Link>
                                 ))}
                             </div>
