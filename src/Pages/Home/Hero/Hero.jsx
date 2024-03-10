@@ -23,7 +23,7 @@ const Hero = () => {
         <>
             <div className="bg-[#F1F9FB] relative">
                 <div className="lg:bg-right h-[100%] bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }}>
-                    <div className="container mx-auto lg:py-28 py-5">
+                    <div className="container mx-auto lg:py-28 py-10">
                         <div className='flex lg:flex-row flex-col justify-between items-center place-content-center gap-8 lg:mx-0 mx-5'>
 
                             <div className='w-full flex-grow'>
