@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
 
             <div className='container mx-auto py-20'>
-                <div className='flex flex-wrap justify-center items-center gap-32 lg:mx-0 mx-5'>
+                <div className='flex flex-wrap justify-center items-center lg:gap-32 gap-16 lg:mx-0 mx-5'>
                     {partners?.map((item, index) => (
                         <div key={index}>
                             <img src={item?.image} alt={''} className='w-24' />
