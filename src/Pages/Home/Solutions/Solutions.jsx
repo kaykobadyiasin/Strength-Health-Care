@@ -8,7 +8,7 @@ const SolutionCard = ({ icon, icoBg, title, description }) => {
 
     return (
         <div
-            className={`shadow-lg p-8 rounded-xl w-72 lg:mx-0 mx-auto duration-300 transition-all ${isHovered ? 'bg-[#4589F4] text-white' : ''}`}
+            className={`shadow-lg p-8 rounded-xl w-72 xl:mx-0 mx-auto duration-300 transition-all ${isHovered ? 'bg-[#4589F4] text-white' : ''}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -26,11 +26,11 @@ const SolutionCard = ({ icon, icoBg, title, description }) => {
 const Solutions = () => {
     return (
         <div className="container mx-auto py-20">
-            <div className="text-center lg:w-3/12 mx-auto">
+            <div className="text-center xl:w-3/12 w-5/6 mx-auto">
                 <SectionTitle section={'Fast Solutions'} title={'Step by Step to get your Solution'} />
             </div>
 
-            <div className="grid lg:grid-cols-4 gap-5 my-20">
+            <div className="grid xl:grid-cols-4 lg:grid-cols-3 lg:justify-center lg:text-center sm:grid-cols-2 justify-center gap-5 lg:my-20 sm:my-10">
                 {[
                     { icon: 'mingcute:search-line', icoBg: 'bg-[#ED4E83]', title: 'Find A Doctor', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit she eiusmod tempor incd.' },
                     { icon: 'mingcute:user-4-line', icoBg: 'bg-[#FE4144]', title: 'Choose Doctor', description: 'Lorem ipsum dolor sit amet she eiusmod tempor incd.' },
@@ -41,9 +41,9 @@ const Solutions = () => {
                 ))}
             </div>
 
-            <div className="lg:bg-center p-16 bg-no-repeat bg-secondary-100 lg:rounded-xl mt-28" style={{ backgroundImage: `url(${patternBg})` }}>
+            <div className="lg:bg-center p-16 bg-no-repeat bg-secondary-100 xl:rounded-xl mt-28" style={{ backgroundImage: `url(${patternBg})` }}>
 
-                <div className='grid lg:grid-cols-4 gap-10'>
+                <div className='grid xl:grid-cols-4 lg:grid-cols-3 lg:justify-center lg:text-center sm:grid-cols-2 justify-center gap-5'>
                     <div className='bg-white rounded-xl px-5 py-10  h-full text-center'>
                         <h2 className='text-4xl font-bold text-[#4589F4]'>145+</h2>
                         <h4 className='text-secondary-100 font-medium mt-2'>World Awards</h4>

@@ -22,19 +22,19 @@ const Hero = () => {
     return (
         <>
             <div className="bg-[#F1F9FB] relative">
-                <div className="lg:bg-right h-[100%] bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }}>
+                <div className="lg:bg-right lg:bg-contain md:bg-cover h-[100%] lg:bg-no-repeat " style={{ backgroundImage: `url(${heroBg})` }}>
                     <div className="container mx-auto lg:py-28 py-10">
                         <div className='flex lg:flex-row flex-col justify-between items-center place-content-center gap-8 lg:mx-0 mx-5'>
 
-                            <div className='w-full flex-grow'>
-                                <div className="mb-8">
-                                    <h1 className="lg:text-6xl md:text-4xl text-3xl montserrat-alternates-bold leading-tight lg:text-[#031D36] text-white mb-5">We Provide Remote Health Care <span className='bg-[#4589F4] bg-opacity-20 secondaryColor px-2 rounded-tr-2xl'>Services</span></h1>
-                                    <p className='lg:pr-60 lg:text-[#111111] opacity-70 text-white'>
+                            <div className='w-full lg:flex-auto md:flex-none'>
+                                <div className="mb-8 sm:w-5/6 lg:mx-0 sm:mx-auto">
+                                    <h1 className="lg:text-6xl sm:text-4xl text-3xl lg:text-left sm:text-center text-center montserrat-alternates-bold leading-tight lg:text-[#031D36] text-white mb-5">We Provide Remote Health Care <span className='bg-[#4589F4] bg-opacity-20 secondaryColor px-2 rounded-tr-2xl'>Services</span></h1>
+                                    <p className='lg:pr-60 lg:text-left sm:text-center text-center lg:text-[#111111] opacity-70 text-white'>
                                         Appraisd is the dedicated performance management platform
                                         helps your business execute on strategic goals.
                                     </p>
                                 </div>
-                                <div className='flex items-center gap-5'>
+                                <div className='flex sm:flex-row flex-col items-center lg:justify-start sm:justify-center gap-5'>
                                     <CommonButton name={'Get Started'} />
                                     <button className="lg:primaryColor lg:text-[#031D36] text-white hover:text-primary-100 duration-300 font-semibold py-2 px-4 rounded flex items-center gap-2 ">
                                         <span className='bg-[#031D36] hover:bg-primary-100 p-3 rounded-full text-white lg:border-none border border-[#4589F4] duration-300 animate__animated animate__pulse animate__infinite animate__slow'><Icon icon="ph:play-fill" /></span>
@@ -42,8 +42,8 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            <div className='w-full flex-grow-0'>
-                                <img src={heroimg} className='rounded-xl md:w-8/12 w-full lg:mx-auto' alt="" />
+                            <div className='w-full'>
+                                <img src={heroimg} className='rounded-xl lg:w-8/12 w-full lg:mx-auto' alt="" />
                             </div>
                         </div>
                     </div>

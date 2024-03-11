@@ -26,7 +26,7 @@ const Doctors = () => {
             <div className="flex justify-center text-center">
                 <SectionTitle section={'Our Doctors'} title={'Our Specialized Doctors'} />
             </div>
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 justify-center text-center py-10">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-3 gap-8 justify-center text-center py-10 xl:mx-0 mx-5">
                 {doctors.map((item, index) => (
                     <Link key={index}>
                         <div className="border-2 border-[#111111] hover:border-primary-100 duration-300 cursor-pointer border-opacity-10 rounded-2xl">

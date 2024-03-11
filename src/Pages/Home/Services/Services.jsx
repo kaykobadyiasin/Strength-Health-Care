@@ -21,7 +21,7 @@ const Services = () => {
             <div className="flex flex-col justify-center text-center">
                 <SectionTitle section={'Our Services'} title={'Services For Your Health'} />
             </div>
-            <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 justify-between items-center gap-5 lg:mx-0 mx-5 mt-10'>
+            <div className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 justify-between items-center gap-5 xl:mx-0 mx-5 mt-10'>
                 {services?.map((item, index) => (
                     <div key={index} className="lg:px-10 px-6 lg:py-5 py-3 bg-[#F1F9FB] rounded-xl">
                         <div className="bg-white rounded-full w-14 h-14 mx-auto p-3">

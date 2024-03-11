@@ -17,7 +17,7 @@ const Footer = () => {
                         <div className='text-white flex flex-col gap-5 lg:text-left '>
                             <img src={logoImage} alt="Medical Healthcare Service" className='w-40 lg:mx-0 ' />
                             <p className='opacity-70'>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.</p>
-                            <p><span>Contact:</span> <span className='text-[#4589F4]'>company@gmail.com</span></p>
+                            <p><span>Contact:</span> <span className='text-[#4589F4]'>strength@gmail.com</span></p>
                             <div className='flex lg:justify-start  items-center gap-5'>
                                 <span>Follow:</span>
                                 {socialMediaLinks.map((link) => (

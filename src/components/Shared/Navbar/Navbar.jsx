@@ -79,7 +79,7 @@ const Navbar = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className={`${!mainNav ? 'block' : 'hidden'} fixed z-10 left-0 top-0 w-72 h-screen bg-white animate__animated animate__slideInLeft rounded-md shadow-xl xl:hidden navMenu`}>
+                    <div className={`${!mainNav ? 'block' : 'hidden'} fixed z-50 left-0 top-0 sm:w-72 w-8/12 h-[100%] bg-white animate__animated animate__slideInLeft shadow-xl xl:hidden navMenu`}>
                         <ul className='flex flex-col py-3 mobileMenu'>
                             <NavLink to={`/`}>
                                 <li className='hover:bg-[#F1F9FB] hover:text-[#4589F4] px-5 py-2 duration-300 rounded'>
