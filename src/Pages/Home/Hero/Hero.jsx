@@ -22,7 +22,7 @@ const Hero = () => {
     return (
         <>
             <div className="bg-[#F1F9FB] relative">
-                <div className="lg:bg-right lg:bg-contain md:bg-cover h-[100%] lg:bg-no-repeat " style={{ backgroundImage: `url(${heroBg})` }}>
+                <div className="lg:bg-right lg:bg-contain md:bg-cover h-[100%] lg:bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }}>
                     <div className="container mx-auto lg:py-28 py-10">
                         <div className='flex lg:flex-row flex-col justify-between items-center place-content-center gap-8 lg:mx-0 mx-5'>
 
@@ -37,7 +37,7 @@ const Hero = () => {
                                 <div className='flex sm:flex-row flex-col items-center lg:justify-start sm:justify-center gap-5'>
                                     <CommonButton name={'Get Started'} />
                                     <button className="lg:primaryColor lg:text-[#031D36] text-white hover:text-primary-100 duration-300 font-semibold py-2 px-4 rounded flex items-center gap-2 ">
-                                        <span className='bg-[#031D36] hover:bg-primary-100 p-3 rounded-full text-white lg:border-none border border-[#4589F4] duration-300 animate__animated animate__pulse animate__infinite animate__slow'><Icon icon="ph:play-fill" /></span>
+                                        <span className='bg-[#031D36] hover:bg-primary-100 p-3 rounded-full text-white border-2 border-[#4589F4] duration-300 animate__animated animate__pulse animate__infinite animate__slow'><Icon icon="ph:play-fill" /></span>
                                         Watch Video</button>
                                 </div>
                             </div>
@@ -49,9 +49,9 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='lg:block hidden'>
-                    <span className='absolute top-40 left-32 rotate-45 animate__animated animate__pulse animate__infinite animate__fast'><Icon icon="jam:medical" className='text-5xl text-[#ED4E83]' /></span>
-                    <span className='absolute top-20 right-1/2 animate__animated animate__heartBeat animate__infinite animate__slow'><Icon icon="streamline:good-health-and-well-being-solid" className='text-3xl text-[#FE4144]' /></span>
-                    <span className='absolute bottom-28 right-2/3 animate__animated animate__pulse animate__infinite animate__fast'><Icon icon="mdi:health-potion" className='text-5xl text-[#12BC8F]' /></span>
+                    <span className='absolute xl:top-40 xl:left-32 lg:top-12 rotate-45 animate__animated animate__pulse animate__infinite animate__fast'><Icon icon="jam:medical" className='text-5xl text-[#ED4E83]' /></span>
+                    <span className='absolute xl:top-20 xl:right-1/2 lg:top-10 lg:right-2/4 animate__animated animate__heartBeat animate__infinite animate__slow'><Icon icon="streamline:good-health-and-well-being-solid" className='text-3xl text-[#FE4144]' /></span>
+                    <span className='absolute xl:bottom-28 xl:right-2/3 lg:bottom-10 lg:right-3/4 animate__animated animate__pulse animate__infinite animate__fast'><Icon icon="mdi:health-potion" className='text-5xl text-[#12BC8F]' /></span>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
- 
+
 import footerImage from '../../../assets/Footer/01.png';
 import logoImage from '../../../assets/Footer/logo.png';
 import { Link } from 'react-router-dom';
@@ -12,9 +12,9 @@ const Footer = () => {
             <div className='bg-[#051729] xl:w-4/6 w-full py-10'>
                 <div className='grid xl:grid-cols-2 lg:grid-cols grid-cols-1'>
                     <div className='xl:block lg:hidden'></div>
-                    <div className='mx-5'>
-                        <img src={footerImage} alt="Medical Healthcare Service" className='xl:w-[70%] lg:[50%] lg:mx-0 mb-20' />
-                        <div className='text-white flex flex-col gap-5 lg:text-left '>
+                    <div className='mx-5 flex md:flex-col flex-col-reverse 2xl:gap-20 xl:gap-32 lg:gap-24 gap-8'>
+                        <img src={footerImage} alt="Medical Healthcare Service" className='xl:w-[80%] lg:w-[50%] sm:w-[50%] lg:mx-0' />
+                        <div className='text-white flex flex-col gap-5 lg:text-left'>
                             <img src={logoImage} alt="Medical Healthcare Service" className='w-40 lg:mx-0 ' />
                             <p className='opacity-70'>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.</p>
                             <p><span>Contact:</span> <span className='text-[#4589F4]'>strength@gmail.com</span></p>
@@ -34,21 +34,23 @@ const Footer = () => {
             {/* Right Section */}
             <div className='bg-[#031D36] w-full'>
                 <div className='lg:px-8 px-5 pt-10'>
-                    <h2 className='text-4xl montserrat-alternates-semibold text-white leading-snug mb-10'> We're Always Ready For Your Health</h2>
-                    <CommonButton name={'Get Appointment'} />
-                    <div className='grid xl:grid-cols-5 lg:grid-cols-3 grid-cols-2 text-sm xl:mt-12 lg:mt-0'>
-                        {footerSections.map((section) => (
-                            <div key={section.title} className='mt-20 flex flex-col gap-8'>
-                                <h4 className='text-white montserrat-alternates-bold'>{section.title}</h4>
-                                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                                    {section.links.map((link) => (
-                                        <li key={link.url} className="mb-4">
-                                            <Link to={link.url} className="hover:underline">{link.text}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
+                    <h2 className='md:text-4xl text-2xl montserrat-alternates-semibold text-white leading-snug mb-8'> We're Always <br /> Ready For Your Health</h2>
+                    <div className='flex flex-col lg:gap-28 gap-16'>
+                        <CommonButton name={'Get Appointment'} />
+                        <div className='grid xl:grid-cols-5 lg:grid-cols-2 grid-cols-2 sm:gap-8 text-sm'>
+                            {footerSections.map( (section) => (
+                                <div key={section.title} className=' flex flex-col gap-8'>
+                                    <h4 className='text-white montserrat-alternates-bold'>{section.title}</h4>
+                                    <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                                        {section.links.map((link) => (
+                                            <li key={link.url} className="mb-4">
+                                                <Link to={link.url} className="hover:underline">{link.text}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

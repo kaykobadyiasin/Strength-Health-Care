@@ -43,7 +43,7 @@ const Main = () => {
         // style={{ width: '100%', height: '100vh' }} ref={scrollbarRef}
         >
             <Navbar />
-            <div >
+            <div>
                 <Outlet />
             </div>
             <Footer />

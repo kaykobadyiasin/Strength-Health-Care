@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/home/logo.png';
@@ -13,12 +13,34 @@ const Navbar = () => {
         setTopNav(!topNav);
     };
 
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Check the scroll position and update the topNav state accordingly
+            if (window.scrollY > 0) {
+                setTopNav(false);
+            } else {
+                setTopNav(true);
+            }
+        };
+
+        // Attach the scroll event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty dependency array ensures that the effect runs only once during mount and cleans up during unmount
+
+
+
     return (
-        <div>
+        <div className={topNav ? `mb-20 animate__animated animate__facInDown` : ''}>
             {topNav && (
-                <div className='top-nav bg-[#031D36] text-white py-3 text-sm lg:block hidden animate__slideInDown'>
-                    <div className='container mx-auto flex justify-between'>
-                        <div className='flex gap-10'>
+                <div className='top-nav bg-[#031D36] text-white py-3 text-sm lg:block hidden animate__animated animate__slideInDown'>
+                    <div className='container mx-auto flex justify-evenly'>
+                        <div className='flex xl:gap-10 gap-5 '>
                             {[
                                 {
                                     to: 'https://wa.me/1719943497',
@@ -38,7 +60,7 @@ const Navbar = () => {
                             ].map((item, index) => (
                                 <Link key={index} to={item.to} className='flex gap-2 items-center' target='_blank'>
                                     <Icon icon={item.icon} className='text-xl' />
-                                    <span>{item.text}</span>
+                                    <span className='xl:block hidden'>{item.text}</span>
                                 </Link>
                             ))}
                         </div>
@@ -60,7 +82,7 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
-            <div className='py-5 xl:px-0 px-5'>
+            <div className='py-5 xl:px-0 px-5 bg-white w-full fixed z-50 shadow-md'>
                 <div className='container mx-auto flex justify-between items-center relative'>
                     <div>
                         <Link to='/'>
