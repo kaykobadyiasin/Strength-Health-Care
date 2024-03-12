@@ -36,7 +36,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={topNav ? `mb-20 animate__animated animate__facInDown` : ''}>
+        <div className={topNav ? `lg:mb-20 animate__animated animate__facInDown` : ''}>
             {topNav && (
                 <div className='top-nav bg-[#031D36] text-white py-3 text-sm lg:block hidden animate__animated animate__slideInDown'>
                     <div className='container mx-auto flex justify-evenly'>
